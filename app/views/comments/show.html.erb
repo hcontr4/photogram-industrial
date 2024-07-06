@@ -1,6 +1,7 @@
 <p style="color: green"><%= notice %></p>
 
 <%= render @comment %>
+<%= "Made by #{@comment.author.username}" %>
 
 <div>
   <%= link_to "Edit this comment", edit_comment_path(@comment) %> |

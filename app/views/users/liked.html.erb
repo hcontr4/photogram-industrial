@@ -1,0 +1,15 @@
+<!-- app/views/users/liked.html.erb -->
+
+<div class="row">
+  <div class="col md-6 offset-3">
+    <h1>
+      <%= @user.username %>
+    </h1>
+
+      <%= render "users/pill", user: @user %>
+  </div>
+</div>
+
+<% @user.liked_photos.each do |photo| %>
+  <%= render "photos/photo", photo: photo %>
+<% end %>

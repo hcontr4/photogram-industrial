@@ -1,0 +1,7 @@
+<h1>Following</h1>
+<%= render 'users/pill', user: @user%>
+<div class="list-group">
+  <% @user.leaders.each do |follower| %>
+    <%= link_to follower.username, user_path(follower.username), class: "list-group-item list-group-item-action" %>
+  <% end %>
+</div>
